@@ -1,7 +1,7 @@
 # Space Apps 2026 Kit
 
 **Tudo que um time precisa para construir e lançar uma solução no NASA Space Apps Challenge 2026 (14 e 15 de novembro).**
-Informação oficial do hackathon em português, mais quatro skills de IA que fazem o seu agente de código (Claude Code, Codex, Cursor, Antigravity, Gemini CLI ou qualquer chat) escolher desafio, fechar o design em minutos, construir rápido e submeter dentro das regras.
+Informação oficial do hackathon em português, mais skills de IA que ajudam no desenvolvimento durante o hackathon: o seu agente de código (Claude Code, Codex, Cursor, Antigravity, Gemini CLI ou qualquer chat) escolher desafio, fechar o design em minutos, construir rápido e submeter dentro das regras.
 
 🇺🇸 [English version](README.en.md)
 
@@ -15,7 +15,7 @@ Informação oficial do hackathon em português, mais quatro skills de IA que fa
 | [`docs/pt-br/regras-e-julgamento.md`](docs/pt-br/regras-e-julgamento.md) | Datas, regras de time, requisitos de elegibilidade, campos do formulário de submissão, os 5 critérios de julgamento e os 10 prêmios globais |
 | [`docs/pt-br/portais-de-dados-nasa.md`](docs/pt-br/portais-de-dados-nasa.md) | Portais de dados da NASA que servem para qualquer desafio e as armadilhas que custam horas |
 | [`docs/en/`](docs/en/) | Tudo acima em inglês |
-| [`skills/`](skills/) | Quatro skills no padrão aberto [Agent Skills](https://agentskills.io) (`SKILL.md`), em inglês |
+| [`skills/`](skills/) | Skills de IA para o desenvolvimento no hackathon, no padrão aberto [Agent Skills](https://agentskills.io) (`SKILL.md`), em inglês |
 
 ## Instalação
 
@@ -112,3 +112,7 @@ Os textos dos desafios, regras e critérios são do site oficial do [NASA Space 
 Os arquivos `DESIGN.md` referenciados pela skill `design-reference` vêm do [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) (licença MIT).
 
 Código e textos próprios deste repositório: [licença MIT](LICENSE).
+
+---
+
+Criado por [Angelino Pires](https://instagram.com/tech_lino).
