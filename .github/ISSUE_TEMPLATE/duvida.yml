@@ -1,7 +1,7 @@
-name: Pedido de mentoria / Mentoring request
-description: Travou em algo? Descreva e eu respondo assim que puder (não durante o fim de semana do evento). Stuck? Describe it and I will answer when I can.
-title: "[Mentoria] "
-labels: ["mentoria"]
+name: Dúvida / Question
+description: Travou em algo? Descreva aqui. A resposta vira FAQ para os outros times. Stuck? Describe it here; the answer becomes an FAQ for other teams.
+title: "[Dúvida] "
+labels: ["question"]
 body:
   - type: dropdown
     id: desafio
