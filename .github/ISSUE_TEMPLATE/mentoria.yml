@@ -1,0 +1,43 @@
+name: Pedido de mentoria / Mentoring request
+description: Travou em algo? Descreva e eu respondo assim que puder (não durante o fim de semana do evento). Stuck? Describe it and I will answer when I can.
+title: "[Mentoria] "
+labels: ["mentoria"]
+body:
+  - type: dropdown
+    id: desafio
+    attributes:
+      label: Desafio / Challenge
+      options:
+        - "01 Abandoned but not Forgotten"
+        - "02 Earth System Trend Detective"
+        - "03 Junior Astronaut Mission Trainer"
+        - "04 Lunar Landing Site Navigator"
+        - "05 Health Monitoring Software"
+        - "06 Dancing with the SARs"
+        - "07 Field Shift: Adapting Farms"
+        - "08 Flame in Freefall"
+        - "09 MODIS and VIIRS Hot Spots"
+        - "10 Earth Analogs for Moon and Mars"
+        - "11 Martian Map"
+        - "12 Planet X and SPHEREx"
+        - "13 Space Mission Design Game"
+        - "14 Earth Information Jukebox"
+        - "Ainda não escolhi / Not chosen yet"
+    validations:
+      required: true
+  - type: input
+    id: stack
+    attributes:
+      label: Stack
+      placeholder: "ex.: React + Vite, Python + Streamlit"
+  - type: textarea
+    id: travou
+    attributes:
+      label: O que travou / What is blocking you
+      description: O que você tentou, o que aconteceu, o que esperava. What you tried, what happened, what you expected.
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Link do repositório ou do projeto / Repo or project link
