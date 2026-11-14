@@ -85,6 +85,7 @@ O assistente lê a skill, pergunta o que falta e entrega o que ela promete. Pode
 **Domingo à tarde**
 
 6. Peça `/submit-and-demo`. Ele escreve, em inglês, cada campo do formulário oficial de submissão pensando nos 5 critérios dos jurados, monta o roteiro do vídeo de 30 segundos ou dos 7 slides, e confere item por item se está tudo dentro das regras.
+7. Se o seu evento local tem apresentação ao vivo pros jurados, peça `/pitch-deck`. Ele pergunta quantos minutos o Local Lead deu e se tem perguntas depois, lê o que você já escreveu na submissão e devolve 6 slides com o que vai escrito e o que o apresentador fala, cronometrado, mais as 5 perguntas que os jurados costumam fazer.
 
 ## As skills
 
@@ -93,6 +94,7 @@ O assistente lê a skill, pergunta o que falta e entrega o que ela promete. Pode
 | [`choose-challenge`](skills/choose-challenge/SKILL.md) | Sábado, primeira hora | 2 ou 3 desafios que combinam com o time, cada um com o plano de 24 horas, o dado da NASA pra começar e o maior risco |
 | [`hackathon-mode`](skills/hackathon-mode/SKILL.md) | O build inteiro | O assistente no modo "entrega": sem teste, sem login, sem complicação. Tecnologia já escolhida (site: Vite + React + Tailwind; análise de dados: Python + Streamlit), projeto no ar antes de ficar bonito, dado de exemplo antes do dado real. Na hora do deploy, explica cada comando em uma frase pra quem nunca publicou nada e tem a lista do que fazer quando quebra |
 | [`nasa-data`](skills/nasa-data/SKILL.md) | Sábado à tarde, na hora de ligar o dado real | A fonte certa pro que a tela precisa, começando pelas que não pedem login (FIRMS, POWER, GIBS, api.nasa.gov), a URL pronta com região e data, o código pra carregar em React ou Python, e a hora de parar e ficar com a amostra |
+| [`pitch-deck`](skills/pitch-deck/SKILL.md) | Antes da apresentação ao vivo no evento local | O formato do seu evento (minutos, perguntas, slides) perguntado primeiro, 6 slides com título, até 3 bullets e a fala de cada um com os segundos, pra colar no Google Slides, e as 5 perguntas dos jurados com resposta combinada |
 | [`design-reference`](skills/design-reference/SKILL.md) | Antes da primeira tela | Um guia visual pronto do acervo [awesome-design-md](https://github.com/VoltAgent/awesome-design-md), escolhido pelo tipo do desafio e aplicado no projeto. Se o time prefere o visual de um site específico, ele extrai de lá |
 | [`submit-and-demo`](skills/submit-and-demo/SKILL.md) | Domingo, últimas horas | O texto de cada campo da submissão em inglês, o roteiro do vídeo de 30 segundos ou dos 7 slides, e a lista de conferência final |
 
@@ -104,9 +106,8 @@ Uma que eu recomendo mas não está aqui, porque é da Anthropic e já existe co
 
 ## A fazer
 
-Skills que ficaram de fora dessa primeira versão:
+O que ficou de fora:
 
-- `pitch-deck`: slides da apresentação local de 5 minutos a partir do README do projeto
 - Tradução das skills pra português
 
 ## Fontes e licença
