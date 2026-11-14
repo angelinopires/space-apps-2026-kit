@@ -78,16 +78,21 @@ The assistant reads the skill, asks for what is missing and delivers what the sk
 3. Challenge chosen, ask `/hackathon-mode`. From then on the assistant works in hackathon mode: picks the technology for you, starts with sample data, puts the project online in the first 2 hours and does one thing at a time.
 4. Before touching a color or a font, ask `/design-reference`. It takes a ready-made visual guide (palette, typography, components) that fits your challenge and applies it to the project. The team never argues about colors again.
 
+**Saturday afternoon, once the screen works on sample data**
+
+5. Ask `/nasa-data`. It swaps the sample for real NASA data without creating any account: four sources that answer right away (fires, weather, satellite imagery, NASA APIs), the exact URL for your region and dates, and the code to load it in your project. If the real source is not in by 7 PM, it tells you to keep the sample and say so in the submission, which judges prefer over a broken live fetch.
+
 **Sunday afternoon**
 
-5. Ask `/submit-and-demo`. It writes every field of the official submission form with the 5 judging criteria in mind, drafts the 30-second video script or the 7 slides, and checks item by item that everything is within the rules.
+6. Ask `/submit-and-demo`. It writes every field of the official submission form with the 5 judging criteria in mind, drafts the 30-second video script or the 7 slides, and checks item by item that everything is within the rules.
 
 ## The skills
 
 | Skill | When | What you get |
 | --- | --- | --- |
 | [`choose-challenge`](skills/choose-challenge/SKILL.md) | Saturday, first hour | 2 or 3 challenges that fit the team, each with the 24-hour plan, the NASA data to start from and the biggest risk |
-| [`hackathon-mode`](skills/hackathon-mode/SKILL.md) | The whole build | The assistant in delivery mode: no tests, no login, no complications. Technology already chosen (website: Vite + React + Tailwind; data analysis: Python + Streamlit), project online before it is pretty, sample data before real data |
+| [`hackathon-mode`](skills/hackathon-mode/SKILL.md) | The whole build | The assistant in delivery mode: no tests, no login, no complications. Technology already chosen (website: Vite + React + Tailwind; data analysis: Python + Streamlit), project online before it is pretty, sample data before real data. At deploy time it explains each command in one sentence for someone who has never published anything, and has the list of what to do when it breaks |
+| [`nasa-data`](skills/nasa-data/SKILL.md) | Saturday afternoon, when it is time for real data | The right source for what the screen needs, starting with the ones that need no login (FIRMS, POWER, GIBS, api.nasa.gov), the URL ready with region and dates, the loading code for React or Python, and when to stop and keep the sample |
 | [`design-reference`](skills/design-reference/SKILL.md) | Before the first screen | A ready-made visual guide from the [awesome-design-md](https://github.com/VoltAgent/awesome-design-md) collection, chosen by challenge type and applied to the project. If the team prefers the look of a specific site, it extracts from there |
 | [`submit-and-demo`](skills/submit-and-demo/SKILL.md) | Sunday, last hours | The text for every submission field in English, the 30-second video script or the 7 slides, and the final checklist |
 
@@ -101,8 +106,6 @@ One I recommend but did not include, because it is Anthropic's and already ships
 
 Skills left out of this first version:
 
-- `ship-fast`: put the project online with one command (Vercel, Netlify, GitHub Pages, Streamlit Cloud, Hugging Face Spaces)
-- `nasa-data`: how to find, subset and download NASA data fast (Earthdata, GIBS, AppEEARS, HDF/NetCDF formats)
 - `pitch-deck`: slides for the local 5-minute presentation from the project README
 - Portuguese translation of the skills
 

@@ -58,6 +58,19 @@ One `app.py`, `st.sidebar` for inputs, `st.plotly_chart` or `st.map` for output.
 
 Deploy: push to a public GitHub repo with `requirements.txt`, then **Streamlit Community Cloud** (share.streamlit.io) → New app → pick the repo. Free, takes 3 minutes. Alternative: Hugging Face Spaces with the Streamlit SDK.
 
+### Deploying with someone who does not code
+
+Most teams have one person running these commands who has never deployed anything. Before each deploy command, say in one plain sentence what it does and what they will see ("this uploads the site; a browser tab will open asking you to log in to Vercel; after that, a link appears in the terminal"). After it runs, tell them which line of the output is the link and ask them to open it in a private window. No explanation of what a build is unless they ask.
+
+When the deploy breaks, check these first, in order:
+
+- **Vercel asks to log in again or hangs on login.** Run `npx vercel login`, finish it in the browser tab, then run `npx vercel --prod` again.
+- **Vercel build fails with a missing module.** The dependency was installed but not saved: `npm install <name>` without `--no-save`, commit `package.json` and `package-lock.json`, redeploy.
+- **Vite site deploys but shows a blank page.** On GitHub Pages, `base` in `vite.config.js` does not match the repo name. On Vercel, a hard-coded path starts with `/` and should be relative. Open the browser console: a 404 on a `.js` file confirms it.
+- **Streamlit Cloud says it cannot find `requirements.txt`** or fails on import. The file must be at the repo root and list every `import` in `app.py`; `pip freeze > requirements.txt` is the fast fix. Push and click Reboot app.
+- **GitHub Pages shows a 404.** Settings → Pages → Source must be the `gh-pages` branch, root folder. The first publish takes up to 2 minutes.
+- **Environment variable or API key missing in production.** Local `.env` files do not travel. Add the variable in the provider's dashboard (Vercel: Settings → Environment Variables; Streamlit: App settings → Secrets) and redeploy. Keep `DEMO_KEY`-class keys out of the browser bundle (see the `nasa-data` skill).
+
 ### Mixed team
 
 Lane A for the demo, Lane B as a one-off script that fetches real NASA data and writes `data/sample.json` the web app reads. A JSON refreshed by that script counts as "live NASA data wired". Do not wire them at runtime.
@@ -77,7 +90,7 @@ Lane A for the demo, Lane B as a one-off script that fetches real NASA data and 
 | --- | --- |
 | Sat 11:00 | Challenge chosen, lane chosen, repo created, `hello` deployed at a public URL |
 | Sat 14:00 | Screen works end to end on sample data |
-| Sat 19:00 | Live NASA data wired for the one core feature (or decision made to stay on a curated sample, documented) |
+| Sat 19:00 | Live NASA data wired for the one core feature (use the `nasa-data` skill), or decision made to stay on a curated sample, documented |
 | Sun 12:00 | Feature freeze. Only fixes, copy and visuals from here |
 | Sun 16:00 | Demo recorded or slides done. Submission form drafted (use the `submit-and-demo` skill) |
 | Sun 20:00 | Submitted. The remaining hours are a buffer, not build time |

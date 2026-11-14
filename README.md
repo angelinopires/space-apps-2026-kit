@@ -78,16 +78,21 @@ O assistente lê a skill, pergunta o que falta e entrega o que ela promete. Pode
 3. Escolhido o desafio, peça `/hackathon-mode`. A partir daí o assistente trabalha no modo hackathon: escolhe a tecnologia por você, começa com dados de exemplo, coloca o projeto no ar nas primeiras 2 horas e faz uma coisa de cada vez.
 4. Antes de mexer em cor ou fonte, peça `/design-reference`. Ele pega um guia visual pronto (paleta, tipografia, componentes) que combina com o seu desafio e aplica no projeto. O time não discute cor nunca mais.
 
+**Sábado à tarde, quando a tela já funciona com dado de exemplo**
+
+5. Peça `/nasa-data`. Ele troca o dado de exemplo por dado real da NASA sem criar conta nenhuma: quatro fontes que respondem na hora (queimadas, clima, imagem de satélite, APIs da NASA), a URL exata pra sua região e data, e o código pra carregar no seu projeto. Se a fonte real não entrar até as 19h, ele te manda ficar com a amostra e escrever isso na submissão, que é o que os jurados preferem a um fetch quebrado.
+
 **Domingo à tarde**
 
-5. Peça `/submit-and-demo`. Ele escreve, em inglês, cada campo do formulário oficial de submissão pensando nos 5 critérios dos jurados, monta o roteiro do vídeo de 30 segundos ou dos 7 slides, e confere item por item se está tudo dentro das regras.
+6. Peça `/submit-and-demo`. Ele escreve, em inglês, cada campo do formulário oficial de submissão pensando nos 5 critérios dos jurados, monta o roteiro do vídeo de 30 segundos ou dos 7 slides, e confere item por item se está tudo dentro das regras.
 
 ## As skills
 
 | Skill | Quando usar | O que você recebe |
 | --- | --- | --- |
 | [`choose-challenge`](skills/choose-challenge/SKILL.md) | Sábado, primeira hora | 2 ou 3 desafios que combinam com o time, cada um com o plano de 24 horas, o dado da NASA pra começar e o maior risco |
-| [`hackathon-mode`](skills/hackathon-mode/SKILL.md) | O build inteiro | O assistente no modo "entrega": sem teste, sem login, sem complicação. Tecnologia já escolhida (site: Vite + React + Tailwind; análise de dados: Python + Streamlit), projeto no ar antes de ficar bonito, dado de exemplo antes do dado real |
+| [`hackathon-mode`](skills/hackathon-mode/SKILL.md) | O build inteiro | O assistente no modo "entrega": sem teste, sem login, sem complicação. Tecnologia já escolhida (site: Vite + React + Tailwind; análise de dados: Python + Streamlit), projeto no ar antes de ficar bonito, dado de exemplo antes do dado real. Na hora do deploy, explica cada comando em uma frase pra quem nunca publicou nada e tem a lista do que fazer quando quebra |
+| [`nasa-data`](skills/nasa-data/SKILL.md) | Sábado à tarde, na hora de ligar o dado real | A fonte certa pro que a tela precisa, começando pelas que não pedem login (FIRMS, POWER, GIBS, api.nasa.gov), a URL pronta com região e data, o código pra carregar em React ou Python, e a hora de parar e ficar com a amostra |
 | [`design-reference`](skills/design-reference/SKILL.md) | Antes da primeira tela | Um guia visual pronto do acervo [awesome-design-md](https://github.com/VoltAgent/awesome-design-md), escolhido pelo tipo do desafio e aplicado no projeto. Se o time prefere o visual de um site específico, ele extrai de lá |
 | [`submit-and-demo`](skills/submit-and-demo/SKILL.md) | Domingo, últimas horas | O texto de cada campo da submissão em inglês, o roteiro do vídeo de 30 segundos ou dos 7 slides, e a lista de conferência final |
 
@@ -101,8 +106,6 @@ Uma que eu recomendo mas não está aqui, porque é da Anthropic e já existe co
 
 Skills que ficaram de fora dessa primeira versão:
 
-- `ship-fast`: colocar o projeto no ar com um comando (Vercel, Netlify, GitHub Pages, Streamlit Cloud, Hugging Face Spaces)
-- `nasa-data`: como achar, recortar e baixar dado da NASA rápido (Earthdata, GIBS, AppEEARS, formatos HDF/NetCDF)
 - `pitch-deck`: slides da apresentação local de 5 minutos a partir do README do projeto
 - Tradução das skills pra português
 
